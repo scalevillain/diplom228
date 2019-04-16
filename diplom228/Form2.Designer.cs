@@ -64,13 +64,13 @@
             this.statTextBox = new System.Windows.Forms.TextBox();
             this.nazvTextBox = new System.Windows.Forms.TextBox();
             this.projectsDataGridView = new System.Windows.Forms.DataGridView();
-            this.Column2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.id_projectTextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -78,10 +78,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.справочникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.отчётыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.списокПользователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.уровниДоступаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.списокПлатформToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.отчётыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             nazvanieLabel = new System.Windows.Forms.Label();
             proizvoditelLabel = new System.Windows.Forms.Label();
             statLabel = new System.Windows.Forms.Label();
@@ -117,6 +117,51 @@
             proizvoditelLabel.Size = new System.Drawing.Size(86, 13);
             proizvoditelLabel.TabIndex = 4;
             proizvoditelLabel.Text = "Производитель";
+            // 
+            // statLabel
+            // 
+            statLabel.AutoSize = true;
+            statLabel.Location = new System.Drawing.Point(469, 69);
+            statLabel.Name = "statLabel";
+            statLabel.Size = new System.Drawing.Size(27, 13);
+            statLabel.TabIndex = 8;
+            statLabel.Text = "stat:";
+            // 
+            // platformaLabel
+            // 
+            platformaLabel.AutoSize = true;
+            platformaLabel.Location = new System.Drawing.Point(469, 95);
+            platformaLabel.Name = "platformaLabel";
+            platformaLabel.Size = new System.Drawing.Size(53, 13);
+            platformaLabel.TabIndex = 10;
+            platformaLabel.Text = "platforma:";
+            // 
+            // nazvLabel
+            // 
+            nazvLabel.AutoSize = true;
+            nazvLabel.Location = new System.Drawing.Point(469, 43);
+            nazvLabel.Name = "nazvLabel";
+            nazvLabel.Size = new System.Drawing.Size(33, 13);
+            nazvLabel.TabIndex = 6;
+            nazvLabel.Text = "nazv:";
+            // 
+            // productLabel
+            // 
+            productLabel.AutoSize = true;
+            productLabel.Location = new System.Drawing.Point(469, 121);
+            productLabel.Name = "productLabel";
+            productLabel.Size = new System.Drawing.Size(46, 13);
+            productLabel.TabIndex = 12;
+            productLabel.Text = "product:";
+            // 
+            // id_projectLabel
+            // 
+            id_projectLabel.AutoSize = true;
+            id_projectLabel.Location = new System.Drawing.Point(469, 17);
+            id_projectLabel.Name = "id_projectLabel";
+            id_projectLabel.Size = new System.Drawing.Size(53, 13);
+            id_projectLabel.TabIndex = 4;
+            id_projectLabel.Text = "id project:";
             // 
             // linkLabel1
             // 
@@ -334,24 +379,6 @@
             this.statTextBox.Size = new System.Drawing.Size(100, 20);
             this.statTextBox.TabIndex = 9;
             // 
-            // statLabel
-            // 
-            statLabel.AutoSize = true;
-            statLabel.Location = new System.Drawing.Point(469, 69);
-            statLabel.Name = "statLabel";
-            statLabel.Size = new System.Drawing.Size(27, 13);
-            statLabel.TabIndex = 8;
-            statLabel.Text = "stat:";
-            // 
-            // platformaLabel
-            // 
-            platformaLabel.AutoSize = true;
-            platformaLabel.Location = new System.Drawing.Point(469, 95);
-            platformaLabel.Name = "platformaLabel";
-            platformaLabel.Size = new System.Drawing.Size(53, 13);
-            platformaLabel.TabIndex = 10;
-            platformaLabel.Text = "platforma:";
-            // 
             // nazvTextBox
             // 
             this.nazvTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectsBindingSource, "nazv", true));
@@ -359,15 +386,6 @@
             this.nazvTextBox.Name = "nazvTextBox";
             this.nazvTextBox.Size = new System.Drawing.Size(100, 20);
             this.nazvTextBox.TabIndex = 7;
-            // 
-            // nazvLabel
-            // 
-            nazvLabel.AutoSize = true;
-            nazvLabel.Location = new System.Drawing.Point(469, 43);
-            nazvLabel.Name = "nazvLabel";
-            nazvLabel.Size = new System.Drawing.Size(33, 13);
-            nazvLabel.TabIndex = 6;
-            nazvLabel.Text = "nazv:";
             // 
             // projectsDataGridView
             // 
@@ -387,6 +405,49 @@
             this.projectsDataGridView.Size = new System.Drawing.Size(444, 219);
             this.projectsDataGridView.TabIndex = 2;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_project";
+            this.dataGridViewTextBoxColumn1.HeaderText = "id_project";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "nazv";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Название";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "stat";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Статус";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "platforma";
+            this.dataGridViewTextBoxColumn4.HeaderText = "platforma";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "product";
+            this.dataGridViewTextBoxColumn5.HeaderText = "product";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Visible = false;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "platforma";
+            this.Column1.DataSource = this.platformiBindingSource;
+            this.Column1.DisplayMember = "nazvanie";
+            this.Column1.HeaderText = "Платформа";
+            this.Column1.Name = "Column1";
+            this.Column1.ValueMember = "id_platform";
+            // 
             // Column2
             // 
             this.Column2.DataPropertyName = "product";
@@ -398,58 +459,6 @@
             this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Column2.ValueMember = "id_prod";
             // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "platforma";
-            this.Column1.DataSource = this.platformiBindingSource;
-            this.Column1.DisplayMember = "nazvanie";
-            this.Column1.HeaderText = "Платформа";
-            this.Column1.Name = "Column1";
-            this.Column1.ValueMember = "id_platform";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "product";
-            this.dataGridViewTextBoxColumn5.HeaderText = "product";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "platforma";
-            this.dataGridViewTextBoxColumn4.HeaderText = "platforma";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "stat";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Статус";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "nazv";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Название";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_project";
-            this.dataGridViewTextBoxColumn1.HeaderText = "id_project";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // productLabel
-            // 
-            productLabel.AutoSize = true;
-            productLabel.Location = new System.Drawing.Point(469, 121);
-            productLabel.Name = "productLabel";
-            productLabel.Size = new System.Drawing.Size(46, 13);
-            productLabel.TabIndex = 12;
-            productLabel.Text = "product:";
-            // 
             // id_projectTextBox
             // 
             this.id_projectTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectsBindingSource, "id_project", true));
@@ -457,15 +466,6 @@
             this.id_projectTextBox.Name = "id_projectTextBox";
             this.id_projectTextBox.Size = new System.Drawing.Size(100, 20);
             this.id_projectTextBox.TabIndex = 5;
-            // 
-            // id_projectLabel
-            // 
-            id_projectLabel.AutoSize = true;
-            id_projectLabel.Location = new System.Drawing.Point(469, 17);
-            id_projectLabel.Name = "id_projectLabel";
-            id_projectLabel.Size = new System.Drawing.Size(53, 13);
-            id_projectLabel.TabIndex = 4;
-            id_projectLabel.Text = "id project:";
             // 
             // button1
             // 
@@ -524,7 +524,7 @@
             this.отчётыToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(860, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(922, 24);
             this.menuStrip1.TabIndex = 20;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -537,12 +537,6 @@
             this.справочникиToolStripMenuItem.Name = "справочникиToolStripMenuItem";
             this.справочникиToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.справочникиToolStripMenuItem.Text = "Справочники";
-            // 
-            // отчётыToolStripMenuItem
-            // 
-            this.отчётыToolStripMenuItem.Name = "отчётыToolStripMenuItem";
-            this.отчётыToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.отчётыToolStripMenuItem.Text = "Отчёты";
             // 
             // списокПользователейToolStripMenuItem
             // 
@@ -562,11 +556,17 @@
             this.списокПлатформToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.списокПлатформToolStripMenuItem.Text = "Список платформ";
             // 
+            // отчётыToolStripMenuItem
+            // 
+            this.отчётыToolStripMenuItem.Name = "отчётыToolStripMenuItem";
+            this.отчётыToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.отчётыToolStripMenuItem.Text = "Отчёты";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(860, 446);
+            this.ClientSize = new System.Drawing.Size(922, 446);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

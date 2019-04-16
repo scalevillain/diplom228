@@ -44,11 +44,14 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
+            this.testBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.testTableAdapter = new diplom228.testerDataSetTableAdapters.testTableAdapter();
             usernameLabel = new System.Windows.Forms.Label();
             ur_dostupaLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.urovni_dostupaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testerDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // usernameLabel
@@ -155,14 +158,23 @@
             // 
             // comboBox2
             // 
-            this.comboBox2.DataSource = this.urovni_dostupaBindingSource;
+            this.comboBox2.DataSource = this.testBindingSource;
             this.comboBox2.DisplayMember = "uroven_dostupa";
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(143, 107);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 11;
-            this.comboBox2.ValueMember = "id_pr";
+            this.comboBox2.ValueMember = "uroven_dostupa";
+            // 
+            // testBindingSource
+            // 
+            this.testBindingSource.DataMember = "test";
+            this.testBindingSource.DataSource = this.testerDataSet;
+            // 
+            // testTableAdapter
+            // 
+            this.testTableAdapter.ClearBeforeFill = true;
             // 
             // Form1
             // 
@@ -184,6 +196,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.urovni_dostupaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.testerDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,6 +217,8 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.FontDialog fontDialog1;
+        private System.Windows.Forms.BindingSource testBindingSource;
+        private testerDataSetTableAdapters.testTableAdapter testTableAdapter;
     }
 }
 

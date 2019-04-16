@@ -38,6 +38,8 @@ namespace diplom228
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "testerDataSet.test". При необходимости она может быть перемещена или удалена.
+            this.testTableAdapter.Fill(this.testerDataSet.test);
             this.KeyPreview = true;
             // TODO: данная строка кода позволяет загрузить данные в таблицу "testerDataSet.users". При необходимости она может быть перемещена или удалена.
             this.usersTableAdapter.Fill(this.testerDataSet.users);
