@@ -79,6 +79,8 @@ namespace diplom228
             this.Validate();
             this.projectsBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.testerDataSet);
+            //hui
+
         }
     }
 }

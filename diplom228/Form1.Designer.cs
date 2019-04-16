@@ -43,6 +43,8 @@
             this.usersTableAdapter = new diplom228.testerDataSetTableAdapters.usersTableAdapter();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.ur_dostupaComboBox = new System.Windows.Forms.ComboBox();
+            this.fontDialog1 = new System.Windows.Forms.FontDialog();
             usernameLabel = new System.Windows.Forms.Label();
             ur_dostupaLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.urovni_dostupaBindingSource)).BeginInit();
@@ -157,17 +159,30 @@
             this.comboBox2.DataSource = this.urovni_dostupaBindingSource;
             this.comboBox2.DisplayMember = "uroven_dostupa";
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(143, 107);
+            this.comboBox2.Location = new System.Drawing.Point(245, 146);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 11;
             this.comboBox2.ValueMember = "id_pr";
             // 
+            // ur_dostupaComboBox
+            // 
+            this.ur_dostupaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "ur_dostupa", true));
+            this.ur_dostupaComboBox.DataSource = this.urovni_dostupaBindingSource;
+            this.ur_dostupaComboBox.DisplayMember = "uroven_dostupa";
+            this.ur_dostupaComboBox.FormattingEnabled = true;
+            this.ur_dostupaComboBox.Location = new System.Drawing.Point(143, 108);
+            this.ur_dostupaComboBox.Name = "ur_dostupaComboBox";
+            this.ur_dostupaComboBox.Size = new System.Drawing.Size(121, 21);
+            this.ur_dostupaComboBox.TabIndex = 12;
+            this.ur_dostupaComboBox.ValueMember = "id_pr";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(409, 215);
+            this.ClientSize = new System.Drawing.Size(417, 232);
+            this.Controls.Add(this.ur_dostupaComboBox);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(ur_dostupaLabel);
             this.Controls.Add(this.comboBox1);
@@ -202,6 +217,8 @@
         private testerDataSetTableAdapters.usersTableAdapter usersTableAdapter;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox ur_dostupaComboBox;
+        private System.Windows.Forms.FontDialog fontDialog1;
     }
 }
 
