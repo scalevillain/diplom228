@@ -35,12 +35,15 @@ namespace diplom228
             this.productsTableAdapter.Fill(this.testerDataSet.products);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "testerDataSet.projects". При необходимости она может быть перемещена или удалена.
             this.projectsTableAdapter.Fill(this.testerDataSet.projects);
-          
+
             panel1.Hide();
            label2.Text = user;
             label3.Text = dostup;
-         
             panel2.Hide();
+            if (label3.Text == "(Тестировщик)")
+            {
+                справочникиToolStripMenuItem.Visible = false;
+            }
 
         }
 
@@ -79,7 +82,7 @@ namespace diplom228
             this.Validate();
             this.projectsBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.testerDataSet);
-            //hui
+            
 
         }
     }
