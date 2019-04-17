@@ -89,9 +89,10 @@ namespace diplom228
                 {
                     Form2.user = comboBox1.Text;
                     Form2.dostup = "("+comboBox2.Text+")";
+                    Form1.ActiveForm.Hide();
                    Form2 win = new Form2();
                     win.Owner = this;
-                    win.Show();
+                    win.ShowDialog();
                 }
                 else
                 {
